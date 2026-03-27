@@ -1,0 +1,27 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+
+# astro
+.astro/
+
+# environment
+.env
+.env.*
+
+# editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# os
+.DS_Store
+Thumbs.db
+
+# hereya
+.hereya/
+hereyaconfig/
