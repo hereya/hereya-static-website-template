@@ -1,0 +1,5 @@
+# project: <to be field>
+# workspace: <to be filled>
+deploy:
+  hereya/cloudfront-deploy:
+    version: ""
