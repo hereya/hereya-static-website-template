@@ -35,9 +35,11 @@ export class HereyaAstroTemplateStack extends cdk.Stack {
           tryBundle(outputDir: string): boolean {
             const templateDir = path.join(__dirname, '..', 'template');
             copyDirSync(templateDir, outputDir);
+            const hereyaYamlPath = path.join(outputDir, 'hereya.yaml');
+            const existing = fs.existsSync(hereyaYamlPath) ? fs.readFileSync(hereyaYamlPath, 'utf-8') : '';
             fs.writeFileSync(
-              path.join(outputDir, 'hereya.yaml'),
-              `project: ${projectName}\nworkspace: ${workspace}\n`,
+              hereyaYamlPath,
+              existing.trimEnd() + `\nproject: ${projectName}\nworkspace: ${workspace}\n`,
             );
             return true;
           },
