@@ -1,5 +1,5 @@
-name: hereya/astro-template
-version: 0.9.0
+name: hereya/static-website-template
+version: 0.1.0
 description: Astro static website template with Tailwind, CodeCommit, and CodeBuild CI/CD
 iac: cdk
 infra: aws
